@@ -48,10 +48,20 @@ header {
 header a {
     color: white;
     text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all 0.2s;
+}
+
+header a:hover {
+    border-bottom-color: white;
+}
+
+header a:active {
+    color: darkorange;
 }
 
 header .logo {
-    padding-right: 6.5%;
+    padding-right: 8%;
 }
 
 .top-card {
@@ -66,7 +76,8 @@ header .logo {
 .main-content .top-card h1 {
     width: fit-content;
     padding: 2%;
-    border-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
     margin: 0;
     background-color: black;
 }
@@ -82,19 +93,29 @@ header .logo {
 }
 
 .main-content h1, .main-content h2 {
-    margin: 4% 0 0 3.5%;
+    margin: 3% 0 0 3.5%;
     width: 50%;
     min-width: 320px;
     border-bottom: 1px solid black;
 }
 
 .main-content p {
-    margin: 3% 0 0 3.5%;
+    margin: 2% 0 0 3.5%;
 }
 
 .menu-highlights {
     display: flex;
     margin: 0 2%;
+}
+
+@media screen and (max-width: 780px) {
+    .menu-highlights {
+        flex-wrap: wrap;
+    }
+
+    .menu-highlights figure img {
+        width: 80%;
+    }
 }
 
 .menu-highlights img {
@@ -103,7 +124,7 @@ header .logo {
 }
 
 .menu-highlights figure {
-    margin-top: 3.5%;
+    margin-top: 2%;
     width: fit-content;
     text-align: center;
     overflow: hidden;
@@ -111,11 +132,14 @@ header .logo {
 
 .main-content a {
     color: black;
-    margin-top: 5%;
 }
 
 .main-content a:active {
     color: darkorange;
+}
+
+.view-menu {
+    margin: 1.5% 0 0 3.5%;
 }
 
 .main-content button {
@@ -136,9 +160,7 @@ header .logo {
 }
 
 .main-content button:active {
-    margin-top: 2%;
-    margin-bottom: 1%;
-    box-shadow: none;    
+    box-shadow: none;
 }
 
 p.get-started {
