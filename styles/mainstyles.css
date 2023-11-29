@@ -117,6 +117,10 @@ header .logo {
     .menu-highlights figure img {
         width: 80%;
     }
+
+    .order-popup .order-page {
+        flex-direction: column;
+    }
 }
 
 .menu-highlights img {
@@ -193,4 +197,28 @@ button.order-proceed-btn:hover {
 
 .order-page ul {
     margin: 2% 0 2% 8.5%;
+}
+
+.order-popup {
+    width: 100%;
+    position: fixed;
+    overflow: scroll;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/background.jpg');
+    background-size: cover;
+    margin-top: 80px;
+}
+
+.order-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 5% 0;
+}
+
+.hidden {
+    visibility: hidden;
 }
