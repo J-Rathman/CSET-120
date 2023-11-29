@@ -47,6 +47,9 @@ header {
 input{
     margin-bottom: 7px;
 }
+img:hover{
+    cursor: pointer;
+}
 .box{
     display: flex;
     flex-direction: column;

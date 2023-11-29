@@ -50,6 +50,9 @@ input{
     margin-bottom: 7px;
     height: 30px;
 }
+img:hover{
+    cursor: pointer;
+}
 .email, .email2, .password{
 width: 350px;
 }
