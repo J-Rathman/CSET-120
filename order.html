@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WIP Cart Page</title>
     <link href="styles/mainstyles.css" rel="stylesheet">
+    <script src="script/home.js"></script>
 </head>
 <body>
     <header>
@@ -12,20 +13,31 @@
         <a href="index.html">Home</a><a href="#">Menu</a><a href="order.html">Order</a><a href="login/login.html">Login</a><a href="login/signup.html">Sign Up</a>
     </header>
     <main>
-        <div class="main-content order-page">
-            <h1>Your Order</h1>
-            <p id="order-placeholder-text">You haven't added anything to your order yet.<br><a href="#">Click here to view the menu</a>.</p>
-            
-            <table class="order-total">
-                <tr><td>Subtotal</td><td>$0.00</td></tr>
-                <tr><td>Tax</td><td>$0.00</td></tr>
-                <tr><td>Delivery fee (If applicable)</td><td>$0.00</td></tr>
-                <tr><td></td></tr>
-                <tr><td>Grand total</td><td>$0.00</td></tr>
-            </table>
-            <form>
-                <button class="order-proceed-btn" onclick="window.alert('Please add an item to your cart to continue');">Proceed to payment</button>
-            </form>
+        <div class="main-content">
+            <button onclick="orderPopup();">button</button>
+        </div>
+
+        <div class="order-popup hidden">
+            <div class="main-content order-page">
+                <div class="order-left">
+                    <h1>Your Order</h1>
+                    <div class="order-list">
+                        <ul>
+                            <li>Your items will appear here once added to order.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="order-right">
+                    <table class="order-total">
+                        <tr><td>Subtotal</td><td>$0.00</td></tr>
+                        <tr><td>Tax</td><td>$0.00</td></tr>
+                        <tr><td>Delivery fee (If applicable)</td><td>$0.00</td></tr>
+                        <tr><td></td></tr>
+                        <tr><td>Grand total</td><td>$0.00</td></tr>
+                    </table>
+                    <button class="order-proceed-btn" onclick="window.alert('Please add an item to your cart to continue');">Proceed to payment</button>
+                </div>
+            </div>
         </div>
     </main>
     
