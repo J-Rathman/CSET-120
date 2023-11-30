@@ -6,17 +6,19 @@
     <title>W.I.P. Main Page</title>
     <link href="styles/mainstyles.css" rel="stylesheet">
 </head>
-<header>
-    <p class="logo">Logo or name here</p>
-    <a href="#">Menu</a><a href="order.html">Order</a><a href="login/login.html">Login</a><a href="login/signup.html">Sign Up</a>
-</header>
 <body>
-    <div class="main-content">
-        <div class="top-card">
-            <h1>Restaurant Name Here</h1>
-        </div>
-        <p>Description of Restaurant</p>
-        <h2>Popular Menu Items</h2>
+    <header>
+        <p class="logo">Logo or name here</p>
+        <a href="#">Home</a><a href="#">Menu</a><a href="order.html">Order</a><a href="login/login.html">Login</a><a href="login/signup.html">Sign Up</a>
+    </header>
+    <main>
+        <div class="main-content">
+            <div class="top-card">
+                <h1>Restaurant Name Here</h1>
+            </div>
+            <p>Description of Restaurant</p>
+            <h2>Popular Menu Items</h2>
+            <a href="#" class="view-menu">View Full Menu &gt</a>
 
             <div class="menu-highlights">
                 <figure>
@@ -37,11 +39,11 @@
                 </figure>       
             </div>
 
-        <button>View Full Menu</button>
-        <h2>Earn Free Rewards!</h2>
-        <p>Create an account to earn points towards free food, and gain access to exclusive, members-only deals!</p>
-        <p class="get-started"><a href="/login/signup.html"><button>Get Started</button></a> Or already have an account? <a href="login/login.html">Click here to login</a></p> 
-    </div>
+            <h2>Earn Free Rewards!</h2>
+            <p>Create an account to earn points towards free food, and gain access to exclusive, members-only deals!</p>
+            <p class="get-started"><button class="get-started" onclick="window.location='login/signup.html'">Get started</button> Or already have an account? <a href="login/login.html">Click here to login</a>.</p> 
+        </div>
+    </main>
     
 </body>
 </html>
