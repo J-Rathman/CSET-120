@@ -161,6 +161,10 @@ button.get-started:hover {
     box-shadow: 0 0 10px black;
 }
 
+button.get-started:active {
+    box-shadow: none;
+}
+
 p.get-started {
     margin-top: 0;
 }
@@ -235,4 +239,16 @@ button.order-proceed-btn:hover {
 
 .order-left h1 {
     text-align: center;
+}
+
+.highlight-add-to-cart {
+    width: 10%;
+    border: none;
+    margin-top: 2%;
+    padding: none;
+    background-color: #f8f8f8;
+}
+
+.highlight-add-to-cart:hover {
+    box-shadow: 0 0 10px darkorange;
 }
