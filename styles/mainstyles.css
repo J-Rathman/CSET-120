@@ -51,6 +51,7 @@ header a {
     text-decoration: none;
     border-bottom: 1px solid transparent;
     transition: all 0.2s;
+    cursor: pointer;
 }
 
 header a:hover {
@@ -91,7 +92,7 @@ header .logo {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding-bottom: 3%;
+    padding-bottom: 5%;
 }
 
 .main-content h1, .main-content h2 {
@@ -115,7 +116,7 @@ header .logo {
         flex-wrap: wrap;
     }
 
-    .menu-highlights figure img {
+    .menu-highlights figure .highlight-img {
         width: 80%;
     }
 }
@@ -153,12 +154,17 @@ button.get-started, button.order-proceed-btn {
     transition: all 0.3s;
     max-width: 26%;
     min-width: 120px;
+    cursor: pointer;
 }
 
 button.get-started:hover {
     background-color: black;
     color: white;
     box-shadow: 0 0 10px black;
+}
+
+button.get-started:active {
+    box-shadow: none;
 }
 
 p.get-started {
@@ -187,7 +193,7 @@ button.order-proceed-btn:hover {
 }
 
 .order-page ul {
-    margin: 2% 0 2% 8.5%;
+    margin: 2% 0 2% 10%;
 }
 
 .order-popup {
@@ -219,10 +225,9 @@ button.order-proceed-btn:hover {
 .order-list {
     width: 70%;
     height: 50%;
-    min-width: 180px;
+    min-width: 190px;
     border: 1px solid black;
     overflow: scroll;
-    text-align: center;
     margin-top: 8%;
 }
 
@@ -235,4 +240,41 @@ button.order-proceed-btn:hover {
 
 .order-left h1 {
     text-align: center;
+}
+
+.highlight-add-to-cart {
+    width: 10%;
+    height: auto;
+    border: none;
+    margin-top: 2%;
+    padding: none;
+    background-color: #f8f8f8;
+    cursor: pointer;
+}
+
+.highlight-add-to-cart:hover {
+    box-shadow: 0 0 10px darkorange;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    font-size: small;
+    padding: 2%;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+footer ul {
+    padding-top: 2%;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 5%;
+}
+
+footer a {
+    color: white;
 }
