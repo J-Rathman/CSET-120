@@ -10,11 +10,14 @@
 <body>
     <header>
         <p class="logo">Logo or name here</p>
-        <a href="index.html">Home</a><a href="#">Menu</a><a href="order.html">Order</a><a href="login/login.html">Login</a><a href="login/signup.html">Sign Up</a>
+        <a href="index.html">Home</a><a href="order.html">Menu</a><a onclick="orderPopup();">Order</a><a href="login/login.html">Login</a><a href="login/signup.html">Sign Up</a>
     </header>
     <main>
         <div class="main-content">
-            <button onclick="orderPopup();">button</button>
+            <div class="menu-item (placeholder)">
+                <button onclick="addToCart('item');">Add to cart</button>
+                <button onclick="orderPopup();">View order</button>
+            </div>
         </div>
 
         <div class="order-popup hidden">
@@ -40,6 +43,13 @@
             </div>
         </div>
     </main>
-    
+    <footer>
+        <p>Made in 2023 at Thaddeus Stevens College</p>
+        <ul type="none">
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms</a></li>
+        </ul>
+    </footer>
 </body>
 </html>
