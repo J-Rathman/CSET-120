@@ -27,10 +27,17 @@
 body {
     font-family: 'Roboto', Helvetica, sans-serif;
     margin-top: 80px;
+    background-color: black;
+    line-height: 1.6rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/background.jpg');
     background-size: cover;
     background-attachment: fixed;
-    line-height: 1.6rem;
 }
   
 header {
@@ -44,6 +51,7 @@ header {
     left: 0;
     top: 0;
     width: 100%; 
+    z-index: 2;
 }
 
 header a {
@@ -93,6 +101,7 @@ header .logo {
     flex-direction: column;
     justify-content: flex-start;
     padding-bottom: 5%;
+    min-height: 100vh;
 }
 
 .main-content h1, .main-content h2 {
@@ -118,6 +127,10 @@ header .logo {
 
     .menu-highlights figure .highlight-img {
         width: 80%;
+    }
+
+    .main-content .highlight-add-to-cart {
+        height: auto;
     }
 }
 
@@ -193,12 +206,12 @@ button.order-proceed-btn:hover {
 }
 
 .order-page ul {
-    margin: 2% 0 2% 10%;
+    margin: 1% 1% 2% 8%;
 }
 
 .order-popup {
     width: 100%;
-    position: fixed;
+    position: absolute;
     overflow: scroll;
     height: 100%;
     top: 0;
@@ -214,8 +227,8 @@ button.order-proceed-btn:hover {
     flex-direction: row;
     width: 90%;
     margin: 0 auto;
-    justify-content: center;
-    padding: 5% 0;
+    justify-content: space-evenly;
+    padding: 3% 0;
 }
 
 .hidden {
@@ -244,7 +257,7 @@ button.order-proceed-btn:hover {
 
 .highlight-add-to-cart {
     width: 10%;
-    height: auto;
+    height: 13%;
     border: none;
     margin-top: 2%;
     padding: none;
@@ -253,7 +266,7 @@ button.order-proceed-btn:hover {
 }
 
 .highlight-add-to-cart:hover {
-    box-shadow: 0 0 10px darkorange;
+    box-shadow: 0 0 8px darkorange;
 }
 
 footer {
@@ -261,8 +274,8 @@ footer {
     color: white;
     font-size: small;
     padding: 2%;
-    width: 90%;
-    margin: 0 auto;
+    width: 100%;
+    margin-top: auto;
     text-align: center;
 }
 
@@ -278,3 +291,38 @@ footer ul li {
 footer a {
     color: white;
 }
+
+div.login-page {
+    width: 70%;
+}
+
+.login-form form {
+    width: 30%;
+    min-width: 320px;
+    margin: 5% auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form input {
+    margin: 4% 0;
+    padding: 1%;
+}
+
+.login-form input[type="text"]:focus {
+    box-shadow: 0 0 8px darkorange;
+    outline: 0;
+}
+
+.login-form input[type="checkbox"] {
+    accent-color: lightgray;
+}
+
+.login-form label {
+    font-size: small;
+}
+
+.login-form input[type="submit"] {
+    border-radius: 10px;
+}
+
