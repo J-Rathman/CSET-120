@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fusion Feast</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <p class="Restaurant name">Fusion Feast</p>
+    <nav>
+        <a href="#">Menu</a>
+        <a href="#">Order</a>
+        <a href="#">Login</a>
+        <a href="#">Sign Up</a>
+    </nav>
+</header>
+
+<div class="main-content">
+    <div class="top-card">
+        <h1>From Our kitchens to Your Heart</h1>
+    </div>
+
+    <section id="mainCourses" class="menu-category" style="display: none;">
+        <h2>main Courses</h2>
+        <div class="menu-item" onclick="showDetails">
+            <img src="images/05COOKING-NIGMEATBALLS2-superJumbo.jpeg" alt="spaghetti meatball">
+            <div class="menu-item-info">
+                <h3>spaghetti meatball</h3>
+                <p>ground meat (mince) rolled into a ball, sometimes along with other ingredients, such as bread crumbs, minced onion, eggs, butter, and seasoning.</p>
+                <div class="menu-item-price">
+                    <span>$10.99</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-item" onclick="showDetails">
+            <img src="images/Seafood-Boil-with-Garlic-Butter-Sauce-1200-x-1200-.jpeg" alt="seafood boil">
+            <div class="menu-item-info">
+                <h3>Seafood boil</h3>
+                <p>fresh shrimp, lobster, clams, crab, potatoes, corn and sausage, all boiled in a flavorful broth</p>
+                <div class="menu-item-price">
+                    <span>$18.99</span>
+                </div>
+            </div>
+        </div>  
+        
+        <div class="menu-item" onclick="showDetails">
+            <img src="images/tomato-goat-cheese-pasta-2.jpeg" alt="seafood bo">
+            <div class="menu-item-info">
+                <h3>creamy tomato pasta</h3>
+                <p>Tomato sauce, cream, tomato paste, parmesan cheese, butter.</p>
+                <div class="menu-item-price">
+                    <span>$13.99</span>
+                </div>
+            </div>
+        </div> 
+        
+        <div class="menu-item" onclick="showDetails">
+            <img src="images/Chicken-Parmesan-Baked-Ziti-11.jpeg" alt="chicken parmesan baked">
+            <div class="menu-item-info">
+                <h3>chicken parmesan baked </h3>
+                <p>whole wheat, chicken breasts, parmesan cheese, olive</p>
+                <div class="menu-item-price">
+                    <span>$14.99</span>
+                </div>
+            </div>
+        </div>  
+
+        <div class="menu-item" onclick="showDetails">
+            <img src="images/fried-rice-8-1200.jpeg" alt="chicken parmesan baked">
+            <div class="menu-item-info">
+                <h3>fried rice </h3>
+                <p>soy sauce, baby carrots, frozen green pease, white rice, eggs, onions.. chicken/pork</p>
+                <div class="menu-item-price">
+                    <span>$15.99</span>
+                </div>
+            </div>
+        </div>  
+    </section>
+    
+
+    <section id="breakfast" class="menu-category" style="display: none;">
+        <h2>Breakfast</h2>
+        <div class="menu-item" onclick="showDetails">
+            <img src="images/2017_cinnamon-roll-breakfast-bake_20154_600x600.jpeg" alt="chicken parmesan baked">
+            <div class="menu-item-info">
+                <h3>cinnamon roll</h3>
+                <div class="menu-item-price">
+                    <span>$8.99</span>
+                </div>
+            </div>
+        </div>  
+
+        <div class="menu-item" onclick="showDetails">
+            <img src="images/best-omelette-recipe-1.jpeg" alt="omelette">
+            <div class="menu-item-info">
+                <h3>omelette  </h3>
+                <div class="menu-item-price">
+                    <span>$3</span>
+                </div>
+            </div>
+        </div>  
+
+        <div class="menu-item" onclick="showDetails">
+            <img src="images/easy-waffle-recipe-1-16.jpeg" alt="waffle">
+            <div class="menu-item-info">
+                <h3>waffle</h3>
+                <div class="menu-item-price">
+                    <span>$4.99</span>
+                </div>
+            </div>
+        </div>  
+        <div class="menu-item" onclick="showDetails">
+            <img src="images/easy-pancakes3-resize-10.jpeg" alt="pancake">
+            <div class="menu-item-info">
+                <h3>pancake </h3>
+                <div class="menu-item-price">
+                    <span>$4.99</span>
+                </div>
+            </div>
+        </div>  
+
+        <div class="menu-item" onclick="showDetails">
+            <img src="images/brioche-french-toast-9-735x1103.jpeg" alt="french toast">
+            <div class="menu-item-info">
+                <h3>brioche french toast </h3>
+                <div class="menu-item-price">
+                    <span>$3.99</span>
+                </div>
+            </div>
+        </div>  
+
+    </section>
+     
+    
+    <section id="desserts" class="menu-category" style="display: none;">
+        <h2>Desserts</h2>
+        <div class="menu-item" onclick="showDetails">
+            <img src="images/Strawberry-cheesecake-recipe-6-of-8.jpg" alt="strawberry cheesecake">
+            <div class="menu-item-info">
+                <h3>strawberry cheesecake</h3>
+                <div class="menu-item-price">
+                    <span>$4.99</span>
+                </div>
+            </div>
+        </div>  
+
+        <div class="menu-item" onclick="showDetails">
+            <img src="images/Vanilla-2-Ingredient-Ice-cream-scaled.jpg" alt="ice cream">
+            <div class="menu-item-info">
+                <h3>ice cream</h3>
+                <div class="menu-item-price">
+                    <span>$1.99</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-item" onclick="showDetails">
+            <img src="images/60_Hersheys_Chocolate-OneBowl-Brownies-_11-18.jpeg" alt="chicken parmesan baked">
+            <div class="menu-item-info">
+                <h3>Brownies </h3>
+                <div class="menu-item-price">
+                    <span>$1.99</span>
+                </div>
+            </div>
+        </div>  
+
+ <div class="menu-item" onclick="showDetails">
+            <img src="images/chocolate-cupcakes-SQUARE.webp" alt="cupcake">
+            <div class="menu-item-info">
+                <h3>cupcakes </h3>
+                <div class="menu-item-price">
+                    <span>$.99</span>
+                </div>
+            </div>
+        </div>  
+
+        <div class="menu-item" onclick="showDetails">
+            <img src="images/PumpkinPie2-2.jpg" alt="pumpkin pie">
+            <div class="menu-item-info">
+                <h3>pumpkin pie </h3>
+                <div class="menu-item-price">
+                    <span>$3.99</span>
+                </div>
+            </div>
+        </div>  
+    </section>
+   
+
+    <section id="drinks" class="menu-category" style="display: none;">
+        <h2>Drinks</h2>
+        <div class="menu-item" onclick="showDetails">
+            <img src="images/2250257.jpeg" alt="chicken parmesan baked">
+            <div class="menu-item-info">
+                <h3>soda </h3>
+            
+                <div class="menu-item-price">
+                    <span>$1.99</span>
+                </div>
+            </div>
+        </div>  
+
+        <div class="menu-item" onclick="showDetails">
+            <img src="images/Caf___Mocha.jpeg" alt="chicken parmesan baked">
+            <div class="menu-item-info">
+                <h3>cafe mocha </h3>
+                <div class="menu-item-price">
+                    <span>$2.99</span>
+                </div>
+            </div>
+        </div>  
+
+        <div class="menu-item" onclick="showDetails">
+            <img src="images/Cup-Of-Creamy-Coffee-500x375.jpg" alt="chicken parmesan baked">
+            <div class="menu-item-info">
+                <h3>creamy coffee </h3>
+                <div class="menu-item-price">
+                    <span>$2.99</span>
+                </div>
+            </div>
+        </div>  
+
+        <div class="menu-item" onclick="showDetails">
+            <img src="images/Thai-Iced-Tea-Boba-6.jpg.webp" alt="chicken parmesan baked">
+            <div class="menu-item-info">
+                <h3>thai iced tea boba</h3>
+</p>
+                <div class="menu-item-price">
+                    <span>$4.99</span>
+                </div>
+            </div>
+        </div>  
+
+        <div class="menu-item" onclick="showDetails">
+            <img src="images/lemonade-1625176213.jpg" alt="chicken parmesan baked">
+            <div class="menu-item-info">
+                <h3>lemonade </h3>
+                <div class="menu-item-price">
+                    <span>$1.99</span>
+                </div>
+            </div>
+        </div>  
+    </section>
+
+    <div id="details-modal">
+        <div class="modal-content">
+            <h2 id="item-name"></h2>
+            <p id="item-description"></p>
+            <p id="item-price"></p>
+            <button onclick="hideDetails()">Close</button>
+        </div>
+    </div>
+
+    <button onclick="showCategory('mainCourses')">View Main courses</button>
+    <button onclick="showCategory('breakfast')">View Breakfast</button>
+    <button onclick="showCategory('desserts')">View Desserts</button>
+    <button onclick="showCategory('drinks')">View Drinks</button>
+
+    <h2>Earn Free Rewards!</h2>
+    <p>Create an account to earn points towards free food, and gain access to exclusive, members-only deals!</p>
+    <p class="get-started"><button>Get Started</button> Or already have an account? <a href="#">Click here to login</a></p>
+</div>
+
+<script>
+    function showCategory(category) {
+        const categories = document.querySelectorAll('.menu-category');
+        categories.forEach(cat => cat.style.display = 'none');
+
+        const selectedCategory = document.getElementById(category);
+        selectedCategory.style.display = 'block';
+    }
+
+    function showDetails(name, description, price) {
+        document.getElementById('item-name').innerText = name;
+        document.getElementById('item-description').innerText = description;
+        document.getElementById('item-price').innerText = 'Price: $' + price.toFixed(2);
+        document.getElementById('details-modal').style.display = 'flex';
+    }
+
+    function hideDetails() {
+        document.getElementById('details-modal').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>
