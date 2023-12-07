@@ -361,6 +361,7 @@ div.login-page {
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
+    padding: 20px;
 }
 
 .menu-item:hover {
@@ -396,6 +397,4 @@ div.login-page {
     margin-top: 10px;
 }
 
-section {
-    padding: 20px;
-}
+
