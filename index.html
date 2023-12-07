@@ -3,47 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>W.I.P. Main Page</title>
+    <title>Home - Fusion Feast</title>
     <link href="styles/mainstyles.css" rel="stylesheet">
-    <script src="script/home.js"></script>
+    <link rel="icon" type="image/png" href="images/icon.png">
 </head>
 <body>
 
     <header>
-        <p class="logo">Logo or name here</p>
-        <a href="index.html">Home</a><a href="order.html">Menu</a><a href="order.html">Order</a><a href="login.html">Login</a><a href="signup.html">Sign Up</a>
+        <p class="logo"><img src="images/icon.png" class="logo-link logo-img"  alt="Failed to load"><span class="logo-link">Fusion Feast</span></p>
+        <a href="index.html">Home</a><a href="menu.html">Menu</a><a href="menu.html">Order</a><a href="login.html">Login</a><a href="signup.html">Sign Up</a>
     </header>
 
     <main>
         <div class="main-content">
             <div class="top-card">
-                <h1>Restaurant Name Here</h1>
+                <h1>Fusion Feast</h1>
             </div>
             <p>Description of Restaurant</p>
             <h2>Popular Menu Items</h2>
-            <a href="#" class="view-menu">View Full Menu &gt</a>
+            <a href="menu.html" class="view-menu">View Menu &gt</a>
 
             <div class="menu-highlights">
-                <figure>
-                    <img src="images/steak2.jpeg" class="highlight-img">
-                    <figcaption>Item description</figcaption>
-                    <button class="highlight-add-to-cart" onclick="addHighlight('item');"><img src="images/add-to-cart.png" title="Add to cart" alt="Add to cart"></button>
-                </figure>
-                <figure>
-                    <img src="images/steak2.jpeg" class="highlight-img">
-                    <figcaption>Item description</figcaption>
-                    <button class="highlight-add-to-cart" onclick="addHighlight('item');"><img src="images/add-to-cart.png" title="Add to cart" alt="Add to cart"></button>
-                </figure>
-                <figure>
-                    <img src="images/steak2.jpeg" class="highlight-img">
-                    <figcaption>Item description</figcaption>
-                    <button class="highlight-add-to-cart" onclick="addHighlight('item');"><img src="images/add-to-cart.png" title="Add to cart" alt="Add to cart"></button>
-                </figure>
-                <figure>
-                    <img src="images/steak2.jpeg" class="highlight-img">
-                    <figcaption>Item description</figcaption>
-                    <button class="highlight-add-to-cart" onclick="addHighlight('item');"><img src="images/add-to-cart.png" title="Add to cart" alt="Add to cart"></button>
-                </figure>       
+                <div class="highlight-box">
+                    <img src="images/best-omelette-recipe-1.jpg">
+                </div> 
+                <div class="highlight-box">
+                    <img src="images/Chicken-Alfredo-bowl.jpg">
+                </div>     
+                <div class="highlight-box">
+                    <img src="images/fried-rice-8-1200.jpg">
+                </div>
+                <div class="highlight-box">
+                    <img src="images/easy-pancakes3-resize-10.jpg">
+                </div>
             </div>
 
             <h2>Earn Free Rewards!</h2>
@@ -60,6 +52,6 @@
             <li><a href="#">Terms</a></li>
         </ul>
     </footer>
-
+    <script src="script/home.js"></script>
 </body>
 </html>

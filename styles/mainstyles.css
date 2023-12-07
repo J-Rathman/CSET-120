@@ -51,7 +51,7 @@ header {
     left: 0;
     top: 0;
     width: 100%; 
-    z-index: 2;
+    z-index: 5;
 }
 
 header a {
@@ -60,6 +60,8 @@ header a {
     border-bottom: 1px solid transparent;
     transition: all 0.2s;
     cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none; 
 }
 
 header a:hover {
@@ -68,10 +70,6 @@ header a:hover {
 
 header a:active {
     color: darkorange;
-}
-
-header .logo {
-    padding-right: 8%;
 }
 
 .top-card {
@@ -86,10 +84,13 @@ header .logo {
 .main-content .top-card h1 {
     width: fit-content;
     padding: 2%;
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
     margin: 0;
     background-color: black;
+    border: 2px solid silver;
+    border-left: none;
+    min-width: 0;
 }
 
 .main-content {
@@ -117,33 +118,19 @@ header .logo {
 
 .menu-highlights {
     display: flex;
-    margin: 0 2%;
+    margin: 1% 3.5% 0;
 }
 
-@media screen and (max-width: 780px) {
-    .menu-highlights {
-        flex-wrap: wrap;
-    }
-
-    .menu-highlights figure .highlight-img {
-        width: 80%;
-    }
-
-    .main-content .highlight-add-to-cart {
-        height: auto;
-    }
+.highlight-box {
+   height: auto;
+   width: 25%;
 }
 
 .menu-highlights img {
-    border: 3px solid black;
-    width: 100%;  
-}
-
-.menu-highlights figure {
-    margin-top: 2%;
-    width: fit-content;
-    text-align: center;
-    overflow: hidden;
+    border: 2px solid black;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .main-content a {
@@ -156,6 +143,24 @@ header .logo {
 
 .view-menu {
     margin: 1.5% 0 0 3.5%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    gap: 3%;
+}
+
+.logo-img {
+    width: 14%;
+    min-width: 32px;
+    border-radius: 6px;
+    background-color: white;
+}
+
+.logo-link {
+    cursor: pointer;
 }
 
 button.get-started, button.order-proceed-btn {
@@ -213,10 +218,9 @@ button.order-proceed-btn:hover {
     width: 100%;
     position: absolute;
     overflow: scroll;
-    height: 100%;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 2;
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/background.jpg');
     background-size: cover;
     margin-top: 80px;
@@ -232,7 +236,7 @@ button.order-proceed-btn:hover {
 }
 
 .hidden {
-    visibility: hidden;
+    display: none;
 }
 
 .order-list {
@@ -326,3 +330,72 @@ div.login-page {
     border-radius: 10px;
 }
 
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.menu-item {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 10px;
+    width: 300px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-category {
+    display: flex;
+    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.menu-item-info {
+    padding: 10px;
+    flex-grow: 1;
+}
+
+.menu-item h3 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.menu-item p {
+    margin: 0;
+    color: #666;
+}
+
+.menu-item-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+section {
+    padding: 20px;
+}
