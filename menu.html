@@ -10,7 +10,8 @@
 <body>
     <header>
         <p class="logo"><img src="images/icon.png" class="logo-link logo-img"  alt="Failed to load"><span class="logo-link">Fusion Feast</span></p>
-        <a href="index.html">Home</a><a href="menu.html">Menu</a><a onclick="orderPopup();">Order</a><a href="login.html">Login</a><a href="signup.html">Sign Up</a>
+        <a href="index.html">Home</a><a href="#" onclick="closePopup();">Menu</a><a onclick="orderPopup();" id="order-link">Order (0)</a><a href="login.html">Login</a><a href="signup.html">Sign Up</a>
+        <span class="order-confirm hidden">Added to order</span>
     </header>
 
     <main>
@@ -271,7 +272,6 @@
 
                 <div class="order-page">
                     <div class="order-left">
-                        <h1>Your Order</h1>
                         <div class="order-list">
                             <ul>
                                 <li id="order-placeholder">Your items will appear here once added to order.</li>
@@ -281,13 +281,13 @@
 
                     <div class="order-right">
                         <table class="order-total">
-                            <tr><td>Subtotal</td><td>$0.00</td></tr>
-                            <tr><td>Tax</td><td>$0.00</td></tr>
-                            <tr><td>Delivery fee (If applicable)</td><td>$0.00</td></tr>
+                            <tr><td>Subtotal</td><td id="subtotal">$0.00</td></tr>
+                            <tr><td>Tax</td><td id="tax">$0.00</td></tr>
                             <tr><td></td></tr>
-                            <tr><td>Grand total</td><td>$0.00</td></tr>
+                            <tr><td>Grand total</td><td id="grand-total">$0.00</td></tr>
+                            <tr><td>Approximate time needed</td><td id="wait-time">0 minutes</td></tr>
                         </table>
-                        <button class="order-proceed-btn" onclick="window.alert('Please add an item to your cart to continue');">Proceed to payment</button>
+                        <button class="order-proceed-btn unavailable" onclick="window.alert('Please add an item to your cart to continue');">Proceed to payment</button>
                     </div>
                 </div>
             </div>

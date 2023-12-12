@@ -72,6 +72,21 @@ header a:active {
     color: darkorange;
 }
 
+.order-confirm {
+    position: absolute;
+    top: 0;
+    right: 5%;
+    margin-top: 80px;
+    z-index: 2;
+    background-color: black;
+    padding: 1%;
+    border-bottom-left-radius: 8px;
+    animation: growDown 300ms ease-in-out forwards;
+    transform-origin: top center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
 .top-card {
     width: 100%;
     color: white;
@@ -199,19 +214,19 @@ p.get-started {
     padding: 0.5rem;
 }
 
-button.order-proceed-btn {
+button.order-proceed-btn.unavailable {
     background-color: gray;
     color: lightgrey;
     box-shadow: none;
     border: 2px solid transparent;
 }
 
-button.order-proceed-btn:hover {
+button.order-proceed-btn.unavailable:hover {
     cursor: not-allowed;
 }
 
 .order-page ul {
-    margin: 1% 1% 2% 8%;
+    margin: 1% 10%;
 }
 
 .order-popup {
@@ -240,9 +255,9 @@ button.order-proceed-btn:hover {
 }
 
 .order-list {
-    width: 70%;
-    height: 50%;
-    min-width: 190px;
+    width: 100%;
+    height: 60%;
+    min-width: 200px;
     border-radius: 4px;
     border: 1px solid black;
     overflow: scroll;
@@ -256,8 +271,8 @@ button.order-proceed-btn:hover {
     align-items: center;
 }
 
-.order-left h1 {
-    text-align: center;
+.quantity-btn-add, .quantity-btn-remove {
+    cursor: pointer;
 }
 
 footer {
@@ -305,7 +320,7 @@ div.login-page {
     outline: 0;
 }
 
-.login-form input[type="checkbox"] {
+input[type="checkbox"] {
     accent-color: lightgray;
 }
 
@@ -400,4 +415,16 @@ div.login-page {
 .add-to-cart-btn:active {
     box-shadow: none;
     background-color: #f8f8f8;
+}
+
+@keyframes growDown {
+    0% {
+        transform: scaleY(0);
+    }
+    80% {
+        transform: scaleY(1.1);
+    }
+    100% {
+        transform: scaleY(1);
+    }
 }
