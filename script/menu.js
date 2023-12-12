@@ -25,6 +25,8 @@ function addToCart(event) {
     if (document.getElementById("order-placeholder")) {
         let placeholder = document.getElementById("order-placeholder");
         placeholder.parentNode.removeChild(placeholder);
+        document.getElementsByClassName("order-proceed-btn")[0].classList.remove("unavailable");
+        document.getElementsByClassName("order-proceed-btn")[0].onclick = proceedToPayment;
     }
     let parent = event.target.parentNode.parentNode;
     let newItem = document.createElement("li");
@@ -84,6 +86,8 @@ function removeOne(event) {
         placeholder.textContent = "Your items will appear here once added to order.";
         placeholder.setAttribute("id", "order-placeholder");
         itemList.appendChild(placeholder);
+        document.getElementsByClassName("order-proceed-btn")[0].classList.add("unavailable");
+        document.getElementsByClassName("order-proceed-btn")[0].onclick = "";
     }
     updateButtons();
 }
@@ -98,4 +102,8 @@ function showConfirmMsg() {
         confirmMsg.style.color = "white";
         document.getElementById("order-link").style.color = "white";
     }, 300);
+}
+
+function proceedToPayment() {
+    
 }

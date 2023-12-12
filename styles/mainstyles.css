@@ -214,11 +214,18 @@ p.get-started {
     padding: 0.5rem;
 }
 
+button.order-proceed-btn {
+    background-color: black;
+    color: white;
+    box-shadow: none;
+    cursor: pointer;
+    border: none;
+}
+
 button.order-proceed-btn.unavailable {
     background-color: gray;
     color: lightgrey;
-    box-shadow: none;
-    border: 2px solid transparent;
+    border: none;
 }
 
 button.order-proceed-btn.unavailable:hover {
