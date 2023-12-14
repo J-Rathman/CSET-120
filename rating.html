@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Give Feedback - Fusion Feast</title>
+    <link href="styles/mainstyles.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/icon.png">
+</head>
+<body>
+    <header>
+        <p class="logo"><img src="images/icon.png" class="logo-link logo-img"  alt="Failed to load"><span class="logo-link">Fusion Feast</span></p>
+        <a href="index.html">Home</a><a href="menu.html">Menu</a><a href="menu.html">Order</a><a href="login.html">Login</a><a href="signup.html">Sign Up</a>
+    </header>
+
+    <main>
+        <div class="main-content rating-page">
+            <h2>Submit Feedback</h2>
+            <p>How was your experience with our restaurant?</p>
+            <div class="rating">
+                <span class="star" onclick="setRating(1)">&#9734</span>
+                <span class="star" onclick="setRating(2)">&#9734</span>
+                <span class="star" onclick="setRating(3)">&#9734</span>
+                <span class="star" onclick="setRating(4)">&#9734</span>
+                <span class="star" onclick="setRating(5)">&#9734</span>
+            </div>
+            <div class="rating-scale">
+                <span>Terrible</span>
+                <span>-----</span>
+                <span>Decent</span>
+                <span>-----</span>
+                <span>Excellent</span>
+            </div>
+            <div class="free-response">
+                <label for="feedback">Please tell us why you chose this rating</label>
+                <textarea id="feedback" name="feedback" rows="5" cols="33" autocomplete="off">...</textarea>
+            </div>
+            <button class="order-proceed-btn feedback-btn" onclick="window.alert('Thank you for your feedback'); window.location.href = 'index.html'">Submit</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>Made in 2023 at Thaddeus Stevens College</p>
+        <ul type="none">
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">Give Feedback</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms</a></li>
+        </ul>
+    </footer>
+    <script src="script/home.js"></script>
+    <script src="script/rating.js"></script>
+</body>
+</html>
+       

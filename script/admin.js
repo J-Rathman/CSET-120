@@ -25,7 +25,7 @@ const menu = [
 window.onload = () => {
     for (let item of menu) {
         let newLi = document.createElement("li");
-        newLi.innerHTML = `<button onclick="this.parentNode.parentNode.removeChild(this.parentNode)">Remove</button> ${menu[menu.indexOf(item)].name} - $${menu[menu.indexOf(item)].price}`;
+        newLi.innerHTML = `<button onclick="this.parentNode.parentNode.removeChild(this.parentNode)">(X)</button> ${menu[menu.indexOf(item)].name} - $${menu[menu.indexOf(item)].price}`;
         document.getElementById("full-menu-list").appendChild(newLi);
     }
 }
@@ -34,7 +34,7 @@ function resetMenu() {
     document.getElementById("full-menu-list").innerHTML = "";
     for (let item of menu) {
         let newLi = document.createElement("li");
-        newLi.innerHTML = `<button onclick="this.parentNode.parentNode.removeChild(this.parentNode)">Remove</button> ${menu[menu.indexOf(item)].name} - $${menu[menu.indexOf(item)].price}`;
+        newLi.innerHTML = `<button onclick="this.parentNode.parentNode.removeChild(this.parentNode)">(X)</button> ${menu[menu.indexOf(item)].name} - $${menu[menu.indexOf(item)].price}`;
         document.getElementById("full-menu-list").appendChild(newLi);
     }
 }
@@ -50,5 +50,5 @@ function addNewItem() {
 }
 
 function insertItem(li, name, price) {
-    li.innerHTML = `<button onclick="this.parentNode.parentNode.removeChild(this.parentNode)">Remove</button> ${name} - $${price}`;   
+    li.innerHTML = `<button onclick="this.parentNode.parentNode.removeChild(this.parentNode)">(X)</button> ${name} - $${price}`;   
 }

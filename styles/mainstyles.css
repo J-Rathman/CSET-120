@@ -322,7 +322,7 @@ div.login-page {
     padding: 1%;
 }
 
-.login-form input[type="text"]:focus {
+input[type="text"]:focus {
     box-shadow: 0 0 8px darkorange;
     outline: 0;
 }
@@ -453,7 +453,7 @@ input[type="checkbox"] {
 .payment-page form input[type="text"] {
     margin-left: 2%;
     width: fit-content;
-    accent-color: lightgray;
+    padding: 1%;
 }
 
 .main-content .payment-page {
@@ -483,6 +483,56 @@ input[type="checkbox"] {
 
 .receipt ul {
     margin-top: 6%;
+}
+
+.rating {
+    margin: 2% 3.5% 0;
+    font-size: xx-large;
+}
+
+.rating-scale {
+    font-size: small;
+    margin: 0 3%;
+}
+
+.free-response {
+    margin: 2% 3.5% 0;
+}
+
+#feedback {
+    max-width: 400px;
+}
+
+#feedback:focus {
+    outline: 0;
+    box-shadow: 0 0 10px darkorange;
+}
+
+.main-content.rating-page {
+    text-align: center;
+    align-items: center;
+}
+
+.main-content.rating-page h2 {
+    margin: 3% 0 0;
+}
+
+.star {
+    cursor: pointer;
+}
+
+.star, .rating {
+    user-select: none;
+    -webkit-user-select: none; 
+}
+
+.order-proceed-btn.feedback-btn {
+    width: 10%;
+}
+
+.rating-page label {
+    display: block;
+    margin-bottom: 1%;
 }
 
 .card-info {
