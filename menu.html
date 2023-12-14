@@ -10,11 +10,12 @@
 <body>
     <header>
         <p class="logo"><img src="images/icon.png" class="logo-link logo-img"  alt="Failed to load"><span class="logo-link">Fusion Feast</span></p>
-        <a href="index.html">Home</a><a href="menu.html">Menu</a><a onclick="orderPopup();">Order</a><a href="login.html">Login</a><a href="signup.html">Sign Up</a>
+        <a href="index.html">Home</a><a href="#" onclick="closePopup();">Menu</a><a href="#" onclick="orderPopup();" id="order-link">Order (0)</a><a href="login.html">Login</a><a href="signup.html">Sign Up</a>
+        <span class="order-confirm hidden">Added to order</span>
     </header>
 
     <main>
-        <div class="main-content">
+        <div class="main-content menu-page">
             <div class="top-card">
                 <h1>Our Menu</h1>
             </div>
@@ -27,9 +28,10 @@
                         <div class="menu-item-info">
                             <h3>Spaghetti and Meatballs</h3>
                             <p>Ground meat (mince) rolled into a ball, sometimes along with other ingredients, such as bread crumbs, minced onion, eggs, butter, and seasoning.</p>
-                            <div class="menu-item-price">
-                                <span>$10.99</span>
-                            </div>
+                        </div>
+                        <div class="menu-item-price">
+                            <span>$10.99</span>
+                            <button class="add-to-cart-btn">Add to order</button>
                         </div>
                     </div>
 
@@ -37,10 +39,11 @@
                         <img src="images/Seafood-Boil-with-Garlic-Butter-Sauce-1200-x-1200-.jpg" alt="seafood boil">
                         <div class="menu-item-info">
                             <h3>Seafood Boil</h3>
-                            <p>Fresh shrimp, lobster, clams, crab, potatoes, corn and sausage, all boiled in a flavorful broth.</p>
-                            <div class="menu-item-price">
-                                <span>$18.99</span>
-                            </div>
+                            <p>Fresh shrimp, lobster, clams, crab, potatoes, corn and sausage, all boiled in a flavorful broth.</p>    
+                        </div>
+                        <div class="menu-item-price">
+                            <span>$18.99</span>
+                            <button class="add-to-cart-btn">Add to order</button>
                         </div>
                     </div>  
                     
@@ -49,9 +52,10 @@
                         <div class="menu-item-info">
                             <h3>Creamy Tomato Pasta</h3>
                             <p>Tomato sauce, cream, tomato paste, parmesan cheese, butter.</p>
-                            <div class="menu-item-price">
-                                <span>$13.99</span>
-                            </div>
+                        </div>
+                        <div class="menu-item-price">
+                            <span>$13.99</span>
+                            <button class="add-to-cart-btn">Add to order</button>
                         </div>
                     </div> 
                     
@@ -60,9 +64,10 @@
                         <div class="menu-item-info">
                             <h3>Chicken Parmesan Bake</h3>
                             <p>Whole wheat, chicken breasts, parmesan cheese, olive.</p>
-                            <div class="menu-item-price">
-                                <span>$14.99</span>
-                            </div>
+                        </div>
+                        <div class="menu-item-price">
+                            <span>$14.99</span>
+                            <button class="add-to-cart-btn">Add to order</button>
                         </div>
                     </div>  
 
@@ -71,9 +76,10 @@
                         <div class="menu-item-info">
                             <h3>Fried Rice</h3>
                             <p>Soy sauce, baby carrots, frozen green peas, white rice, eggs, onions + chicken or pork.</p>
-                            <div class="menu-item-price">
-                                <span>$15.99</span>
-                            </div>
+                        </div>
+                        <div class="menu-item-price">
+                            <span>$15.99</span>
+                            <button class="add-to-cart-btn">Add to order</button>
                         </div>
                     </div>  
                 </section>
@@ -84,9 +90,10 @@
                         <img src="images/2017_cinnamon-roll-breakfast-bake_20154_600x600.jpg" alt="cinnamon rolls">
                         <div class="menu-item-info">
                             <h3>Cinnamon Roll</h3>
-                            <div class="menu-item-price">
-                                <span>$3.99</span>
-                            </div>
+                        </div>
+                        <div class="menu-item-price">
+                            <span>$3.99</span>
+                            <button class="add-to-cart-btn">Add to order</button>
                         </div>
                     </div>  
 
@@ -94,9 +101,10 @@
                         <img src="images/best-omelette-recipe-1.jpg" alt="omelette">
                         <div class="menu-item-info">
                             <h3>Omelette</h3>
-                            <div class="menu-item-price">
-                                <span>$3.99</span>
-                            </div>
+                        </div>
+                        <div class="menu-item-price">
+                            <span>$3.99</span>
+                            <button class="add-to-cart-btn">Add to order</button>
                         </div>
                     </div>  
 
@@ -104,9 +112,10 @@
                         <img src="images/easy-waffle-recipe-1-16.jpg" alt="waffle">
                         <div class="menu-item-info">
                             <h3>Waffle</h3>
-                            <div class="menu-item-price">
-                                <span>$4.99</span>
-                            </div>
+                        </div>
+                        <div class="menu-item-price">
+                            <span>$4.99</span>
+                            <button class="add-to-cart-btn">Add to order</button>
                         </div>
                     </div>  
 
@@ -114,9 +123,10 @@
                         <img src="images/easy-pancakes3-resize-10.jpg" alt="pancake">
                         <div class="menu-item-info">
                             <h3>Pancakes</h3>
-                            <div class="menu-item-price">
-                                <span>$4.99</span>
-                            </div>
+                        </div>
+                        <div class="menu-item-price">
+                            <span>$4.99</span>
+                            <button class="add-to-cart-btn">Add to order</button>
                         </div>
                     </div>  
 
@@ -124,9 +134,10 @@
                         <img src="images/brioche-french-toast-9-735x1103.webp" alt="french toast">
                         <div class="menu-item-info">
                             <h3>Brioche French Toast </h3>
-                            <div class="menu-item-price">
-                                <span>$3.99</span>
-                            </div>
+                        </div>
+                        <div class="menu-item-price">
+                            <span>$3.99</span>
+                            <button class="add-to-cart-btn">Add to order</button>
                         </div>
                     </div>  
                 </section>
@@ -137,9 +148,10 @@
                         <img src="images/Strawberry-Cheesecake-SQ-2.jpg" alt="strawberry cheesecake">
                         <div class="menu-item-info">
                             <h3>Strawberry Cheesecake</h3>
-                            <div class="menu-item-price">
-                                <span>$4.99</span>
-                            </div>
+                        </div>
+                        <div class="menu-item-price">
+                            <span>$4.99</span>
+                            <button class="add-to-cart-btn">Add to order</button>
                         </div>
                     </div>  
 
@@ -147,9 +159,10 @@
                         <img src="images/ice-cream.webp" alt="ice cream">
                         <div class="menu-item-info">
                             <h3>Ice Cream</h3>
-                            <div class="menu-item-price">
-                                <span>$1.99</span>
-                            </div>
+                        </div>
+                        <div class="menu-item-price">
+                            <span>$1.99</span>
+                            <button class="add-to-cart-btn">Add to order</button>
                         </div>
                     </div>
 
@@ -157,9 +170,10 @@
                         <img src="images/Template-Size-for-Blog-Photos-15.jpg" alt="brownies">
                         <div class="menu-item-info">
                             <h3>Brownies</h3>
-                            <div class="menu-item-price">
-                                <span>$1.99</span>
-                            </div>
+                        </div>
+                        <div class="menu-item-price">
+                            <span>$1.99</span>
+                            <button class="add-to-cart-btn">Add to order</button>
                         </div>
                     </div>  
 
@@ -167,9 +181,10 @@
                         <img src="images/chocolate-cupcakes-SQUARE.webp" alt="cupcake">
                         <div class="menu-item-info">
                             <h3>Cupcake</h3>
-                            <div class="menu-item-price">
-                                <span>$0.99</span>
-                            </div>
+                        </div>
+                        <div class="menu-item-price">
+                            <span>$0.99</span>
+                            <button class="add-to-cart-btn">Add to order</button>
                         </div>
                     </div>  
 
@@ -177,9 +192,10 @@
                         <img src="images/PumpkinPie2-2.jpg" alt="pumpkin pie">
                         <div class="menu-item-info">
                             <h3>Pumpkin Pie</h3>
-                            <div class="menu-item-price">
-                                <span>$3.99</span>
-                            </div>
+                        </div>
+                        <div class="menu-item-price">
+                            <span>$3.99</span>
+                            <button class="add-to-cart-btn">Add to order</button>
                         </div>
                     </div>  
                 </section>
@@ -190,9 +206,10 @@
                         <img src="images/2250257.jpg" alt="soda">
                         <div class="menu-item-info">
                             <h3>Soda</h3>
-                            <div class="menu-item-price">
-                                <span>$1.99</span>
-                            </div>
+                        </div>
+                        <div class="menu-item-price">
+                            <span>$1.99</span>
+                            <button class="add-to-cart-btn">Add to order</button>
                         </div>
                     </div>  
 
@@ -200,9 +217,10 @@
                         <img src="images/Caf___Mocha.jpg" alt="mocha">
                         <div class="menu-item-info">
                             <h3>Cafe Mocha</h3>
-                            <div class="menu-item-price">
-                                <span>$2.99</span>
-                            </div>
+                        </div>
+                        <div class="menu-item-price">
+                            <span>$2.99</span>
+                            <button class="add-to-cart-btn">Add to order</button>
                         </div>
                     </div>  
 
@@ -210,9 +228,10 @@
                         <img src="images/Cup-Of-Creamy-Coffee-500x375.png" alt="coffee">
                         <div class="menu-item-info">
                             <h3>Coffee</h3>
-                            <div class="menu-item-price">
-                                <span>$2.99</span>
-                            </div>
+                        </div>
+                        <div class="menu-item-price">
+                            <span>$2.99</span>
+                            <button class="add-to-cart-btn">Add to order</button>
                         </div>
                     </div>  
 
@@ -220,9 +239,10 @@
                         <img src="images/Thai-Iced-Tea-Boba-6.webp" alt="boba tea">
                         <div class="menu-item-info">
                             <h3>Thai Iced Tea Boba</h3>
-                            <div class="menu-item-price">
-                                <span>$4.99</span>
-                            </div>
+                        </div>
+                        <div class="menu-item-price">
+                            <span>$4.99</span>
+                            <button class="add-to-cart-btn">Add to order</button>
                         </div>
                     </div>  
 
@@ -230,9 +250,10 @@
                         <img src="images/Lemonade-foodiecrush.com-9-1.jpg" alt="lemonade">
                         <div class="menu-item-info">
                             <h3>Lemonade</h3>
-                            <div class="menu-item-price">
-                                <span>$1.99</span>
-                            </div>
+                        </div>
+                        <div class="menu-item-price">
+                            <span>$1.99</span>
+                            <button class="add-to-cart-btn">Add to order</button>
                         </div>
                     </div>  
                 </section>
@@ -251,45 +272,118 @@
 
                 <div class="order-page">
                     <div class="order-left">
-                        <h1>Your Order</h1>
                         <div class="order-list">
                             <ul>
-                                <li>Your items will appear here once added to order.</li>
+                                <li id="order-placeholder">Your items will appear here once added to order.</li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="order-right">
                         <table class="order-total">
-                            <tr><td>Subtotal</td><td>$0.00</td></tr>
-                            <tr><td>Tax</td><td>$0.00</td></tr>
-                            <tr><td>Delivery fee (If applicable)</td><td>$0.00</td></tr>
+                            <tr><td>Subtotal</td><td class="subtotal">$0.00</td></tr>
+                            <tr><td>Tax</td><td class="tax">$0.00</td></tr>
                             <tr><td></td></tr>
-                            <tr><td>Grand total</td><td>$0.00</td></tr>
+                            <tr><td>Grand total</td><td class="grand-total">$0.00</td></tr>
+                            <tr><td>Approximate time needed</td><td class="wait-time">0 minutes</td></tr>
                         </table>
-                        <button class="order-proceed-btn" onclick="window.alert('Please add an item to your cart to continue');">Proceed to payment</button>
+                        <button class="order-proceed-btn unavailable">Proceed to payment</button>
                     </div>
                 </div>
             </div>
+
             <footer>
                 <p>Made in 2023 at Thaddeus Stevens College</p>
                 <ul type="none">
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="#">Privacy Policy</a></li>
                     <li><a href="#">Terms</a></li>
                 </ul>
             </footer>
+        </div>
+
+        <div class="payment-popup hidden">
+            <div class="main-content">
+                <div class="top-card">
+                    <h1>Payment</h1>
+                </div>
+                <div class="payment-page">
+                    <div class="payment-method">
+                            <h2>How do you want to pay for your order?</h2>
+                        <div class="payment-form">
+                            <form onsubmit="showReceipt(); return false;">
+                                <label>
+                                    <input type="radio" name="pay-radio" required autocomplete="off" onclick="payByCard();">
+                                    Online
+                                </label> 
+                                <label>
+                                    <input type="radio" name="pay-radio" required autocomplete="off">
+                                    In restaurant
+                                </label>
+                                <input type="text" placeholder="Enter name for the order" id="name-input" required autocomplete="off">
+                                <input type="submit" value="Place Order">                          
+                            </form>
+                        </div>
+                    </div>
+
+                    <table class="order-total">
+                        <tr><td>Subtotal</td><td class="subtotal">$0.00</td></tr>
+                        <tr><td>Tax</td><td class="tax">$0.00</td></tr>
+                        <tr><td></td></tr>
+                        <tr><td>Grand total</td><td class="grand-total">$0.00</td></tr>
+                        <tr><td>Approximate time needed</td><td class="wait-time">0 minutes</td></tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="card-info hidden">
+                <button onclick="this.parentNode.classList.add('hidden');">Close</button>
+                <form onsubmit="this.parentNode.classList.add('hidden'); return false;">
+                    <input type="text" placeholder="Card number" required>
+                    <input type="text" placeholder="CVV" required>
+                    <input type="text" placeholder="Expiration date" required>
+                    <input type="submit" value="Confirm">
+                </form>
+            </div>
+            <footer>
+                <p>Made in 2023 at Thaddeus Stevens College</p>
+                <ul type="none">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms</a></li>
+                </ul>
+            </footer>
+        </div>
+
+        <div class="receipt order-popup hidden">
+            <div class="main-content">
+                <div class="top-card">
+                    <h1>Receipt</h1>
+                </div>
+                <ul type="none">
+                    <li id="order-name">Thank you for your order!</li>
+                    <li>-Order details-</li>
+                    <li id="order-number"></li>
+                    <li id="order-summary"></li>
+                    <li id="final-wait-time"></li>
+                </ul>
+                <div>
+                    <button class="receipt-btn" onclick="window.print();">Print receipt</button>
+                    <button class="receipt-btn" onclick="window.location.href='index.html'">Back to home</button>
+                </div>
+            </div>
         </div>
     </main>
 
     <footer>
         <p>Made in 2023 at Thaddeus Stevens College</p>
         <ul type="none">
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="#">Privacy Policy</a></li>
             <li><a href="#">Terms</a></li>
         </ul>
     </footer>
     <script src="script/home.js"></script>
+    <script src="script/menu.js"></script>
 </body>
 </html>

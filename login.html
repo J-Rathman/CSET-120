@@ -10,7 +10,7 @@
 <body>
     <header>
         <p class="logo"><img src="images/icon.png" class="logo-link logo-img"  alt="Failed to load"><span class="logo-link">Fusion Feast</span></p>
-        <a href="index.html">Home</a><a href="menu.html">Menu</a><a href="menu.html">Order</a><a href="login.html">Login</a><a href="signup.html">Sign Up</a>
+        <a href="index.html">Home</a><a href="menu.html">Menu</a><a href="menu.html">Order</a><a href="#">Login</a><a href="signup.html">Sign Up</a>
     </header>
     
     <main>
@@ -21,9 +21,9 @@
             </div>
 
             <div class="login-form">
-                <form method="POST" action="index.html">
-                    <input type="text" placeholder="Email..." required>
-                    <input type="text" placeholder="Password..." required>
+                <form onsubmit="login(); return false;">
+                    <input type="text" placeholder="Email..." id="email" required>
+                    <input type="text" placeholder="Password..." id="password" required>
                     <section>
                         <input type="checkbox" name="remember-me">
                         <label for="remember-me">Remember Me</label>
@@ -37,11 +37,12 @@
     <footer>
         <p>Made in 2023 at Thaddeus Stevens College</p>
         <ul type="none">
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="#">Privacy Policy</a></li>
             <li><a href="#">Terms</a></li>
         </ul>
     </footer>
     <script src="script/home.js"></script>
+    <script src="script/login.js"></script>
 </body>
 </html>
