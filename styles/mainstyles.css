@@ -178,7 +178,7 @@ header a:active {
     cursor: pointer;
 }
 
-button.get-started, button.order-proceed-btn {
+button.get-started, button.order-proceed-btn, button.go-back-btn {
     padding: 20px;
     margin: 1.5% auto;
     border: 2px solid black;
@@ -190,13 +190,13 @@ button.get-started, button.order-proceed-btn {
     cursor: pointer;
 }
 
-button.get-started:hover {
+button.get-started:hover, button.order-proceed-btn:hover, button.go-back-btn:hover {
     background-color: black;
     color: white;
     box-shadow: 0 0 10px black;
 }
 
-button.get-started:active {
+button.get-started:active, button.order-proceed-btn:active, button.go-back-btn:active {
     box-shadow: none;
 }
 
@@ -236,7 +236,7 @@ button.order-proceed-btn.unavailable:hover {
     margin: 1% 10%;
 }
 
-.order-popup {
+.order-popup, .payment-popup {
     width: 100%;
     position: absolute;
     overflow: scroll;
@@ -422,6 +422,63 @@ input[type="checkbox"] {
 .add-to-cart-btn:active {
     box-shadow: none;
     background-color: #f8f8f8;
+}
+
+.payment-method {
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-content .payment-method h2 {
+    margin: 0;
+    width: fit-content;
+}
+
+.payment-form {
+    padding: 4% 0;
+}
+
+.payment-page .order-total {
+    margin: 4% 10% 0 0;
+}
+
+.payment-page form input[type="radio"] {
+    accent-color: black;
+    margin: 1%;
+    cursor: pointer;
+}
+
+.payment-page form input[type="text"] {
+    margin-left: 2%;
+    width: fit-content;
+    accent-color: lightgray;
+}
+
+.main-content .payment-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.payment-page form input[type="submit"] {
+    background-color: black;
+    margin-top: 4%;
+    color: white;
+    padding: 2%;
+    border-radius: 8px;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.receipt {
+    text-align: center;
+}
+
+.receipt ul {
+    margin-top: 6%;
 }
 
 @keyframes growDown {

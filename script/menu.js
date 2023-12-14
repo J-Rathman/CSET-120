@@ -9,17 +9,22 @@ window.onload = () => {
 
 function orderPopup() {
     document.getElementsByClassName("order-popup")[0].classList.remove("hidden");
-    document.getElementsByClassName("main-content")[0].classList.add("hidden");
+    document.getElementsByClassName("menu-page")[0].classList.add("hidden");
+    document.getElementsByClassName("payment-popup")[0].classList.add("hidden");
     document.getElementsByClassName("order-confirm")[0].classList.add("hidden");
+    document.getElementsByClassName("receipt")[0].classList.add("hidden");
     window.scrollTo(0, 0);
 }
 
 function closePopup() {
     document.getElementsByClassName("order-popup")[0].classList.add("hidden");
-    document.getElementsByClassName("main-content")[0].classList.remove("hidden");
+    document.getElementsByClassName("payment-popup")[0].classList.add("hidden");
+    document.getElementsByClassName("menu-page")[0].classList.remove("hidden");
+    document.getElementsByClassName("receipt")[0].classList.add("hidden");
 }
 
 let total = 0;
+let order = [];
 
 function addToCart(event) {
     if (document.getElementById("order-placeholder")) {
@@ -32,6 +37,7 @@ function addToCart(event) {
     let newItem = document.createElement("li");
     let itemPrice = parent.querySelector(".menu-item-price span").textContent.replace("$", "");
     newItem.innerHTML =  `${parent.querySelector(".menu-item-info h3").textContent}  -  $<span class="list-price">${itemPrice}</span> <span class="quantity-btn-add">[+]</span> <span class="quantity-btn-remove">[—]</span>`;
+    order.push(`${parent.querySelector(".menu-item-info h3").textContent} - ${itemPrice}`);
     let itemList = document.getElementsByClassName("order-list")[0].querySelector("ul");
     itemList.appendChild(newItem);
     total += parseFloat(itemPrice);
@@ -43,14 +49,22 @@ function addToCart(event) {
 
 function updateTotal(numOfItems) {
     document.getElementById("order-link").textContent = `Order (${numOfItems.children.length})`;
-    document.getElementById("subtotal").textContent = `$${total.toFixed(2)}`;
+    for (let element of document.getElementsByClassName("subtotal")) {
+        element.textContent = `$${total.toFixed(2)}`;
+    }
     let tax = total * 0.06;
     tax = Math.round(tax * 100) / 100;
-    document.getElementById("tax").textContent = `$${tax.toFixed(2)}`;
+    for (let element of document.getElementsByClassName("tax")) {
+        element.textContent = `$${tax.toFixed(2)}`;
+    }
     let grandTotal = Math.round((total + tax) * 100) / 100;
-    document.getElementById("grand-total").textContent = `$${grandTotal.toFixed(2)}`;
+    for (let element of document.getElementsByClassName("grand-total")) {
+        element.textContent = `$${grandTotal.toFixed(2)}`;
+    }
     let waitTime = `${numOfItems.children.length * 10} minutes`;
-    document.getElementById("wait-time").textContent = waitTime;
+    for (let element of document.getElementsByClassName("wait-time")) {
+        element.textContent = waitTime;
+    }
 }
 
 function updateButtons() {
@@ -100,10 +114,29 @@ function showConfirmMsg() {
     document.getElementById("order-link").style.color = "darkorange";
     window.setTimeout(() => {
         confirmMsg.style.color = "white";
-        document.getElementById("order-link").style.color = "white";
+        document.getElementById("order-link").style.color = "";
     }, 300);
 }
 
 function proceedToPayment() {
-    
+    document.getElementsByClassName("payment-popup")[0].classList.remove("hidden");
+    document.getElementsByClassName("order-popup")[0].classList.add("hidden");
+    window.scrollTo(0, 0);
+}
+
+function proceedBtn() {
+    document.getElementsByClassName("place-order-btn")[0].classList.remove("unavailable");
+    document.getElementsByClassName("place-order-btn")[0].addEventListener("click", showReceipt);
+}
+
+function showReceipt() {
+    document.getElementsByClassName("receipt")[0].classList.remove("hidden");
+    document.getElementsByClassName("payment-popup")[0].classList.add("hidden");
+    let tax = total * 0.06;
+    tax = Math.round(tax * 100) / 100;
+    let grandTotal = Math.round((total + tax) * 100) / 100;
+    document.getElementById("order-name").textContent = `Thank you for your order, ${document.getElementById("name-input").value}!`;
+    document.getElementById("order-number").textContent = `Order number: WO${Math.floor(Math.random() * 1000000)}`;
+    document.getElementById("order-summary").textContent = `Order total: ${document.getElementsByClassName("order-list")[0].querySelector("ul").children.length} item(s) totalling $${grandTotal.toFixed(2)}`;
+    document.getElementById("final-wait-time").textContent = `Your order will be ready for pickup at 750 E King St, Lancaster in approximately ${document.getElementsByClassName("order-list")[0].querySelector("ul").children.length * 10} minutes`;
 }
