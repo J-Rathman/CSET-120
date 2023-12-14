@@ -21,9 +21,9 @@
             </div>
 
             <div class="login-form">
-                <form method="POST" action="index.html">
-                    <input type="text" placeholder="Email..." required>
-                    <input type="text" placeholder="Password..." required>
+                <form onsubmit="login(); return false;">
+                    <input type="text" placeholder="Email..." id="email" required>
+                    <input type="text" placeholder="Password..." id="password" required>
                     <section>
                         <input type="checkbox" name="remember-me">
                         <label for="remember-me">Remember Me</label>
@@ -43,5 +43,6 @@
         </ul>
     </footer>
     <script src="script/home.js"></script>
+    <script src="script/login.js"></script>
 </body>
 </html>

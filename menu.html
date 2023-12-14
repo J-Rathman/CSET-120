@@ -313,7 +313,7 @@
                         <div class="payment-form">
                             <form onsubmit="showReceipt(); return false;">
                                 <label>
-                                    <input type="radio" name="pay-radio" required autocomplete="off">
+                                    <input type="radio" name="pay-radio" required autocomplete="off" onclick="payByCard();">
                                     Online
                                 </label> 
                                 <label>
@@ -334,6 +334,16 @@
                         <tr><td>Approximate time needed</td><td class="wait-time">0 minutes</td></tr>
                     </table>
                 </div>
+            </div>
+
+            <div class="card-info hidden">
+                <button onclick="this.parentNode.classList.add('hidden');">Close</button>
+                <form onsubmit="this.parentNode.classList.add('hidden'); return false;">
+                    <input type="text" placeholder="Card number" required>
+                    <input type="text" placeholder="CVV" required>
+                    <input type="text" placeholder="Expiration date" required>
+                    <input type="submit" value="Confirm">
+                </form>
             </div>
             <footer>
                 <p>Made in 2023 at Thaddeus Stevens College</p>
@@ -359,6 +369,10 @@
                 </ul>
                 <button class="go-back-btn" onclick="window.location.href='index.html'">Back to home</button>
             </div>
+        </div>
+
+        <div class="manager-page hidden">
+            
         </div>
     </main>
 

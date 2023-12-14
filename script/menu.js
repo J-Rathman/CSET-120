@@ -140,3 +140,7 @@ function showReceipt() {
     document.getElementById("order-summary").textContent = `Order total: ${document.getElementsByClassName("order-list")[0].querySelector("ul").children.length} item(s) totalling $${grandTotal.toFixed(2)}`;
     document.getElementById("final-wait-time").textContent = `Your order will be ready for pickup at 750 E King St, Lancaster in approximately ${document.getElementsByClassName("order-list")[0].querySelector("ul").children.length * 10} minutes`;
 }
+
+function payByCard() {
+    document.getElementsByClassName("card-info")[0].classList.remove("hidden");
+}
