@@ -132,6 +132,7 @@ function proceedBtn() {
 function showReceipt() {
     document.getElementsByClassName("receipt")[0].classList.remove("hidden");
     document.getElementsByClassName("payment-popup")[0].classList.add("hidden");
+    document.getElementById("order-link").textContent = "Order";
     let tax = total * 0.06;
     tax = Math.round(tax * 100) / 100;
     let grandTotal = Math.round((total + tax) * 100) / 100;
