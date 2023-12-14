@@ -178,7 +178,7 @@ header a:active {
     cursor: pointer;
 }
 
-button.get-started, button.order-proceed-btn, button.go-back-btn {
+button.get-started, button.order-proceed-btn, button.receipt-btn {
     padding: 20px;
     margin: 1.5% auto;
     border: 2px solid black;
@@ -190,13 +190,13 @@ button.get-started, button.order-proceed-btn, button.go-back-btn {
     cursor: pointer;
 }
 
-button.get-started:hover, button.order-proceed-btn:hover, button.go-back-btn:hover {
+button.get-started:hover, button.order-proceed-btn:hover, button.receipt-btn:hover {
     background-color: black;
     color: white;
     box-shadow: 0 0 10px black;
 }
 
-button.get-started:active, button.order-proceed-btn:active, button.go-back-btn:active {
+button.get-started:active, button.order-proceed-btn:active, button.receipt-btn:active {
     box-shadow: none;
 }
 
@@ -473,6 +473,10 @@ input[type="checkbox"] {
     cursor: pointer;
 }
 
+.main-content iframe, .about-page ul {
+    margin: 2% 0 0 3.5%;
+}
+ 
 .receipt {
     text-align: center;
 }
